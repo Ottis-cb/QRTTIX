@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de qr code</title>
+    <link rel="stylesheet" href="./css/aos.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <nav>
+        <img src="./resssources/img/InShot_20261004_081037420.png" alt="logo QRTTIX">
+        <div class="retour">
+            <div id="mode">
+                <img src="./resssources/icon/light-svgrepo-com.svg" alt="ligth logo">
+            </div>
+            <div>
+                <img src="" alt="">
+                <p>Retour aux outils</p>
+            </div>
+        </div>
+    </nav>
+    
+    <main>
+        <div class="texte">
+            <div class="badge">
+                <h4><span></span>OUTIL GRATUIT A DECOUVRIR</h4>
+            </div>
+            <h1>QR Code <span>Generator.</span></h1>
+            <p>Transformer vos textes, liens et informations en QR Codes
+                en quelques secondes. Simple, rapide et efficace.
+            </p>
+        </div>
+
+        <div class="outil">
+            <div class="control">
+                <div class="titre">
+                    <h3>Créer votre QR Code</h3>
+                    <p>Etape 01</p>
+                </div>
+                <div class="first">
+                    <span>Votre contenu</span>
+                    <input type="text" placeholder="Entrer votre texte, URL, ou toute autre information" required>
+                </div>
+
+                <div class="second">
+                    <span>Choisissez un type de contenu</span>
+                    <div class="contenu">
+                        <div>
+                            <img src="/resssources/icon/url-1423-svgrepo-com.svg" alt="url logo">
+                            <p>URL/Texte</p>
+                        </div>
+                        <div>
+                            <img src="/resssources/icon/mail-alt-1-svgrepo-com (1).svg" alt="mail logo">
+                            <p>Email</p>
+                        </div>
+                        <div>
+                            <img src="/resssources/icon/phone-office-svgrepo-com.svg" alt="phone logo">
+                            <p>Téléphone</p>
+                        </div>
+                        <div>
+                            <img src="/resssources/icon/wifi-high-svgrepo-com.svg" alt="wifi logo">
+                            <p>Wifi</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="génerer">Générer mon QR Code</button>
+                <div class="infos">
+                    <img src="/resssources/icon/info-svgrepo-com (3).svg" alt="info logo">
+                    <div class="info">
+                        <span>Bon à savoir</span>
+                        <p>Votre QR Code peut etre téléchargé au format PNG et partagé facilement.</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="aperçu">
+                <div class="titre">
+                    <h3>Aperçu du QR Code</h3>
+                    <p>Etape 02</p>
+                </div>
+                <div class="qr">
+                    <div class="qrcode">
+                        <img src="/resssources/icon/qr-code-svgrepo-com (1).svg" alt="qrcode logo">
+                        <div class="description">
+                            <span>Votre QR Code apparaîtra ici</span>
+                            <p>Entrez votre contenu puis cliquez sur le bouton de génération</p>
+                        </div>
+                    </div>
+                    <button id="download">Télécharger</button>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+    <footer>
+        <img src="./resssources/img/InShot_20261004_081037420.png" alt="logo QRTTIX">
+        <p class="droit">©2026 FIDIMANJAKASOA Ottis</p>
+        <p> tous droits réservés</p>
+    </footer>
+
+    <script src="./js/qrcode.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/aos.js"></script>
+    <script>
+        AOS.init({
+            once: false,
+            offset: 200,
+            mirror: true
+        });
+    
+    </script>
+</body>
+</html>
