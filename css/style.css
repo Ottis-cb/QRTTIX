@@ -386,11 +386,14 @@ footer img {
 .light .outil .control .infos .info span {
     color: #172033;
 }
-.light .aperçu .qrcode {
+.light .aperçu .qr {
     background: #f8fafc;
 }
-.light .aperçu .qrcode::before{
+.light .aperçu .qr::before{
     background: #637fd2;
+}
+.light footer{
+    background: #ffff;
 }
 
 @media (max-width: 1000px) {

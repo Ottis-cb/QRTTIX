@@ -43,11 +43,20 @@ button.addEventListener('click', function() {
 });
 
 download.addEventListener('click', function(){
-   const image = qr.querySelector('img');
-   if (image) {
-      const link = document.createElement('a');
-      link.href = image.src;
-      link.download = 'QRTTIX_ottis.png';
-      link.click();
+   const canvas = qr.querySelector('canvas');
+   if (!canvas) {
+      alert('Veuillez générer un Qr code avant de le télécharger.');
+      return;
    }
-})
+   canvas.toBlob(function (blob){
+      const url = URL.createObjectURL(blob);
+
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'QRTTIX-QRCode_by_Ottis.png'
+
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(url);
+   }, 'image/png');
+});
