@@ -49,14 +49,22 @@ download.addEventListener('click', function(){
       return;
    }
    canvas.toBlob(function (blob){
+      if(!blob){
+         alert("Impossible de générer l'image");
+         return;
+      }
       const url = URL.createObjectURL(blob);
 
       const link = document.createElement('a');
+
       link.href = url;
       link.download = 'QRTTIX-QRCode_by_Ottis.png'
 
       document.body.appendChild(link);
       link.click();
-      document.body.removeChild(url);
+      link.remove();
+      setTimeout(function(){
+         URL.revokeObjectURL(url);
+      }, 1000)
    }, 'image/png');
 });
